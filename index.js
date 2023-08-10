@@ -260,17 +260,18 @@
 
 //CREATION OF DATE
 
-let date = new Date();
-console.log(date);
+// let date = new Date();
+// console.log(date);
 
-let date2 = new Date('August 18 2003 7:00');
-console.log(date2);
+// let date2 = new Date('August 18 2003 7:00');
+// console.log(date2);
 
 
-let date3 = new Date(2003, 7,18,5);
-console.log(date3);
+// let date3 = new Date(2003, 7,18,5);
+// console.log(date3);
 
-date3.setFullYear(2002);
-console.log(date3);
+// date3.setFullYear(2002);
+// console.log(date3);
+
 
 

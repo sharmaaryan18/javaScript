@@ -275,3 +275,27 @@
 
 
 
+
+//ARRAYS
+
+let numbers = [2,5,8,7,3];
+console.log(numbers);
+//Access the elements
+console.log(numbers[0]);
+
+//Insertion at end
+numbers.push(10);
+
+
+//Insertion at begin
+numbers.unshift(20);
+//middle-Splice
+numbers.splice(2,0, 'a', 35,'k');
+
+
+//SEARCHING
+console.log(numbers);
+
+
+
+

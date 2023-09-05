@@ -665,15 +665,211 @@ let person = {
 //   const ab =5;
 // }     
 
-let arr =[-1,-2,-3,-4];
-  // let total =0;
-  //  for(let value of arr)
-  //   total =total+ value;
-  // console.log(total);
+// let arr =[-1,-2,-3,-4];
+//   // let total =0;
+//   //  for(let value of arr)
+//   //   total =total+ value;
+//   // console.log(total);
 
-  let totalSum = arr.reduce((accumulator,currentValue) => accumulator + currentValue,0);
-  console.log("Printing Total Sum: ")
-  console.log(totalSum);
+//   let totalSum = arr.reduce((accumulator,currentValue) => accumulator + currentValue,0);
+//   console.log("Printing Total Sum: ")
+//   console.log(totalSum);
+
+
+
+  //iife=> immediately invoked function expression
+  //we can make private variable and it runs the function immediately
+  
+  //  var ans = (function() {
+  //   var privateval=12;
+
+  //   return {
+  //     getter: function() {
+  //       console.log(privateval);
+  //     },
+  //     setter:function(val) {
+  //       privateval = val;
+  //     }
+  //   }
+  // })()
+
+
+
+//Prototypal Inheritance
+  //  var human = {
+  //     canFly : false,
+  //     canTalk : true,
+  //     canWalk : true,
+  //     haveEmotions : true,
+  //     hasFourLegs : false
+  //  }
+
+  //  var aryan = {
+  //   canMakeAmazingWebsites: true,
+  //   canMakeAwesomeAnimations: true,
+  //   canMakeWorldClassAwardedWebsites: true
+  //  }
+
+  //  aryan.__proto__ = human;
+
+
+//value of this
+//global=>window
+//function=>window
+//method=>obj
+// var button = document.querySelector("button");
+// button.addEventListener("click", function() {
+//   console.log(this.style.color="red");
+// })
+//In event listener this value refers to the value written before the .addEventListener
+
+
+
+
+//CALL APPLY BLIND=>   if we a function and any other object  but the defaulut value  of this inside the function is window So we can can point the this value to any object using functionName.call(nameOfObject)
+  // function abcd() {
+  //   console.log(this); 
+  // } 
+  // var obj = {
+  //   age:24
+  // }
+  // abcd.call(obj)
+//APPLY=> IN THIS WE USE ARGUEMENT values as an array to pass.
+  //   function abcd(val,val1,val2) {
+  //   console.log(this,val,val1,val2); 
+  // } 
+  // var obj = {
+  //   age:24
+  // }
+  // abcd.apply(obj,[1,2,3]) 
+
+  //    function abcd() {
+  //   console.log(this); 
+  // } 
+  // var obj = {
+  //   age:24
+  // }
+  // var bindedfnc= abcd.bind(obj);
+  // bindedfnc();
+
+
+
+
+
+
+  //SYNCHRONOUS AND ASYNCHRONOUS
+
+  //Synchronous
+  // Synchronous is a blocking architecture, so the execution of each operation is dependent on the completion of the one before it.
+
+  // Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously. 
+
+
+  //JS IS NOT ASYNCHRONOUS
+  // Callback function runs when we get answer in Async code.
+
+  // setTimeout(function(){
+  //   console.log("Hii");
+  // },5000)
+  //This function will run after 5000ms 0r 5seconds
+
+  // a Sync 
+  // b Sync 
+  // c Async 
+  // d Async
+
+  //a and b will be stored in MAIN STACK and will be removed after completion.
+  //c and d will be in Side Stack whichever does his work complete will be passed to MAIN Stack and execution will be done then c will follow the same process. 
+
+  //EventLoop=>event loop helps to pass from SideStack to Main Stack when Main stack is Empty
+
+  // console.log("Hii1");
+  //  console.log("Hii2");
+  // setTimeout(function(){
+  //   console.log("Hii3");
+  // },0);
+  // console.log("Hii4");
+  // synchronous will be moved to MainStack and will be executed first i.e Hii1 hii2 hii4 then Asynchronous i.e Hii3 which is stored in SideStack is passed to MainStack as its completion time is 0s so it will be quickly moved from SideStack to MainStack by event loop and its execution is done.
+
+
+
+
+  //SENDS THE REQUEST
+  // fetch
+  //XMLHttpRequest
+  // axios
+  // promises
+  // setTimeout 
+  // setInterval
+
+//how to proceed
+  // then catch 
+  // callbacks 
+  // async await
+
+  //promises=> three states- resolve,reject and pending.
+  // if resolved then
+  // if reject catch
+
+  // var ans = new Promise((res,rej) => {
+  //   if(false) {
+  //     return res();
+  //   }
+  //   else {
+  //     return rej();
+  //   }
+  // })
+
+  // ans
+  // .then(function(){
+  //   console.log("resolve hogya tha")
+  // })
+  // .catch(function(){
+  //   console.log("Reject hua tha!");
+  // }) 
+
+  //User will ask for a number 0-9 and if number is below 5 resolve if not reject.
+  // var ans = new Promise((rs, rej)=>{
+  //  var n = Math.floor(Math.random()*10);
+  //  if(n<5) {
+  //   return res();
+  //  }
+  //  else{
+  //   return rej();
+  //  }
+  // })
+
+  // ans.then(function() {
+  //   console.log("Below");
+  // })
+  // .catch(function(){
+  //   console.log("Above");
+  // })
+
+
+
+  //Async await
+
+  // async function abcd() {
+  //   let raw = await fetch("https://randomuser.me/api/");
+  //   let ans = await raw.json();//in this line await is used so that the line will be execute after the above line is executed
+  //   console.log(ans);
+  // }
+  // abcd();
+
+
+
+  //Concurrency=>
+  //In Js both sync and Async code process simultaneously.
+  //Parallelism=>
+  //focuses more on different processors and their cores 
+  //THrottling=>  controlling the no. of executions in a code 
+
+
+
+
+
+
 
 
 

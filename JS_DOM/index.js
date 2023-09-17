@@ -1,3 +1,51 @@
+console.log(document.querySelector("p"));
+
+ var a= document.querySelector("p");
+ console.log(a);
+
+ var b= document.querySelector("#wrapper");
+ console.log(b);
+
+ a.innerHTML="Lets study DOMS";
+
+ a.style.backgroundColor="Red";
+
+ var a= document.querySelector("p");
+a.addEventListener("click",function() {
+  a.innerHTML="TU NHI TOH KOI AUR SHI"
+  a.style.color="yellow"
+  a.style.backgroundColor="#000"
+})
+
+
+//BULB
+// var bulb = document.querySelector("#bulb")
+// var btn = document.querySelector("button")
+// var flag =0;
+// btn.addEventListener("click",function() {
+//   if (flag==0) {
+//     bulb.style.backgroundColor="yellow";
+//     console.log("clicked")
+//     flag=1
+//   }else {
+//     bulb.style.backgroundColor="white";
+//     console.log("Again clicked")
+//     flag=0
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function eventFunction () {
 //     console.log("i have clicked on document");
@@ -33,13 +81,6 @@
 // }
 // document.body.appendChild(myDiv);
 
-
-let element = document.querySelector('#wrapper');
-
-element.addEventListener('click',function(event){
-  if(event.target.nodeName==='SPAN') {
-  console.log('span pr click kiya hai '+ event.target.textContent);
-  }
-});
+ 
 
  
